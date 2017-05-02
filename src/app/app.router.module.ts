@@ -11,8 +11,9 @@ import { MovieComponent } from "./components/movie/movie.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SignUpComponent } from "./components/signup/signup.component";
 import { LoginComponent } from "./components/login/login.component";
+import { RoutingAccessGuard } from "app/routing.guard";
 
-
+ 
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
   {
     path: 'home',
     component:HomeComponent,
-  
+    canActivate: [RoutingAccessGuard]
   },  
 
   {
@@ -59,8 +60,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes/*,{ useHash: true } ng build --prod*/)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes/* ,{ useHash: true } ng build --prod*/)],
+  exports: [RouterModule],
+  providers: [RoutingAccessGuard]
 })
 export class AppRouterModule 
 { 
