@@ -1,0 +1,14 @@
+.movie {
+
+    color:red;
+}
+
+.img {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

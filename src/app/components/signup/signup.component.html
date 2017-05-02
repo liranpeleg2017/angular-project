@@ -1,0 +1,40 @@
+  <!-- Modal -->
+  <form name="form"  #f="ngForm" novalidate>
+  <div class="modal fade" id="mySignUp" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" onclick="form.reset()">&times;</button>
+          <h4 class="modal-title">Signup Form</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="form-group col-md-6" >
+                    <label >Username</label>
+                    <input type="text" class="form-control" name="userName" #userName="ngModel" ngModel />
+                </div>  
+            </div>             
+            <div class="row"> 
+                <div class="form-group col-md-6">
+                    <label >Firstname</label>
+                    <input type="text" class="form-control" maxlength="5" placeholder="" #firstName="ngModel" name="firstName" ngModel required>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6" >
+                    <label >Lastname</label>
+                    <input type="text"  class="form-control" name="lastName" #lastName="ngModel" ngModel required/>
+                </div>        
+            </div>  
+
+        </div>
+        <div class="modal-footer">
+          <input type="submit" (click)="onSubmit(f)" [disabled]="!f.valid" class="btn btn-default" data-dismiss="modal">
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  </form>

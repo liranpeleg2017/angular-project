@@ -1,0 +1,30 @@
+<p>
+  about works!
+</p>
+
+<p>
+{{myObject.CreatedOn | jsonDate | date: 'dd/MM/yyyy'}}
+
+</p>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="row">
+    <div class="form-group col-sm-3">
+      <label for="myName">My Name:</label>
+      <input type="text" class="form-control" name="myName" [(ngModel)]="model.MyName" #myName="ngModel" required>
+    </div>
+  </div>
+   <div class="row">
+    <div class="form-group col-sm-3">
+      <label for="myName">Email:</label>
+      <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required email>
+    </div>
+  </div>  
+  <div class="row">
+     <div class="form-group col-sm-3">
+       <input type="submit">
+      <span class="alert alert-primary">{{model.email +':'+f.valid}}</span>
+     </div>
+
+  </div>
+
+</form>

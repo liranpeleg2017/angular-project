@@ -1,0 +1,21 @@
+ <form class="form-signin" #f="ngForm" (submit)="onSubmit(f)" novalidate>
+    <div class="col-md-4"></div>
+        <div class="panel col-md-4">
+        
+            <h3 class="form-signin-heading">Log in to continue</h3>
+        
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="userName" [(ngModel)]="model.userName"  autofocus required>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" [(ngModel)]="model.email" required email >
+            <div class="form-label label-danger" style="text-align: center" *ngIf="!f.valid">Enter user credentials to enter</div>
+            <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+            </div>
+            <input class="btn btn-md btn-primary btn-block" [disabled]="!f.valid" type="submit" value="Sign in">
+            <div><p></p></div>
+        </div> 
+    <div class="col-md-4"></div>
+  </form> 
