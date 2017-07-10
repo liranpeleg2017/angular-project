@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { ModuleWithProviders  } from "@angular/core";
+=======
+
+>>>>>>> c6e61de48c0228ab3bc80939b0d192bf8cd4442a
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -82,8 +86,12 @@ export const RoutingComponents =
 ];
 
 
+<<<<<<< HEAD
 =======
 // import { ModuleWithProviders  } from "@angular/core";
+=======
+
+>>>>>>> c6e61de48c0228ab3bc80939b0d192bf8cd4442a
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -166,4 +174,8 @@ export const RoutingComponents =
 ];
 
 
+<<<<<<< HEAD
 >>>>>>> b2c85472d9c558fd226f6516022e8ad0ca9113a0
+=======
+
+>>>>>>> c6e61de48c0228ab3bc80939b0d192bf8cd4442a
